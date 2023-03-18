@@ -50,8 +50,8 @@ if run:
               "₦" + str(round(amount*exp_ret, 2)),
               delta=str(round(exp_ret*100, 2)) + "%")
     st.text(f"Projected Investment Value: ₦{round((exp_ret+1)*amount, 2)}")
-    st.text(f"Current Price: ₦{lastPrice}")
-    st.text(f"Expected Price: ₦{price} +/- ₦{vol}")
+    st.text(f"Current Share Price: ₦{lastPrice}")
+    st.text(f"Expected Share Price: ₦{price} +/- ₦{vol}")
     st.plotly_chart(fig, use_container_width=False)
     
     
