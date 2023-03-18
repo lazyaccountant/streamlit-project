@@ -5,7 +5,7 @@ from datetime import date
 import json
 from YTD import predDuration
 
-sys.path.append("./")
+sys.path.append("./Streamlit/")
 from Monte_Carlo import *
 
 st.set_page_config(
