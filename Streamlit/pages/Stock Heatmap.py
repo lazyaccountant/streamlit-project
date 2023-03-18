@@ -16,7 +16,7 @@ st.set_page_config(
 
 st.write("# Market Returns Heatmap")
 
-pf = pd.read_csv("C:/Users/User/Desktop/Projects/NGXmap/stock_heatmap.csv")
+pf = pd.read_csv("Streamlit/pages/stock_heatmap.csv")
 
 returns = pf["YTD Return"].tolist()
 market_cap = pf["Market Cap"].tolist()
