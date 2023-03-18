@@ -1,13 +1,18 @@
 import streamlit as st
 import sys
+import os
 from AFX_API import get_data
 from datetime import date
 import json
 from YTD import predDuration
 
-sys.path[0] += '\\..'
+current = os.path.dirname(os.path.realpath(__file__))
+parent_directory = os.path.dirname(current)
+  
+sys.path.append(parent_directory)
 
-from Streamlit.Monte_Carlo import *
+from parentdirectory.Monte_Carlo import *
+
 
 st.set_page_config(
     page_title="Monte Carlo Simulation",
