@@ -52,7 +52,7 @@ if run:
     st.text(f"Projected Investment Value: ₦{round((exp_ret+1)*amount, 2)}")
     st.text(f"Current Share Price: ₦{lastPrice}")
     st.text(f"Expected Share Price: ₦{price} +/- ₦{vol}")
-    st.plotly_chart(fig, use_container_width=False)
+    st.plotly_chart(fig, use_container_width=True)
     
     
 
