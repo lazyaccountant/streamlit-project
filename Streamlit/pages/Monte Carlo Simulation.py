@@ -1,5 +1,5 @@
 import streamlit as st
-from Monte_Carlo import *
+from Streamlit/Monte_Carlo import *
 from AFX_API import get_data
 from datetime import date
 import json
