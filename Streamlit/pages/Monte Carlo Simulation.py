@@ -6,12 +6,10 @@ from datetime import date
 import json
 from YTD import predDuration
 
-current = os.path.dirname(os.path.realpath(__file__))
-parent_directory = os.path.dirname(current)
-  
-sys.path.append(parent_directory)
+parent = os.path.abspath('.')
+sys.path.insert(1, parent)
 
-from Streamlit.Monte_Carlo import *
+from Monte_Carlo import *
 
 
 st.set_page_config(
