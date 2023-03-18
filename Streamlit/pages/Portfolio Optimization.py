@@ -102,7 +102,7 @@ def backtest(port_weights):
     st.text(f"Expected Annual Returns: {round(xp_ret * 100, 2)}%")
     
 
-with open("company_data.json") as json_file:
+with open("Streamlit/company_data.json") as json_file:
     data = json.load(json_file)
 
 
