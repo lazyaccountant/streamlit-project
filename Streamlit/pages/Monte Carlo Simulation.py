@@ -11,7 +11,7 @@ parent_directory = os.path.dirname(current)
   
 sys.path.append(parent_directory)
 
-from parentdirectory.Monte_Carlo import *
+from Streamlit.Monte_Carlo import *
 
 
 st.set_page_config(
