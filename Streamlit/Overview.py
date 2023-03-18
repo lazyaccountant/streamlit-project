@@ -45,7 +45,7 @@ def defaultchart(company_name, df, period, duration):
                 delta=str(round(period_ret*100, 2)) + "%")
     fig = px.line(df.iloc[-1*period:], labels={"value": "Price (₦)"})
     fig.update_layout(showlegend=False)
-    st.plotly_chart(fig, use_container_width=False)
+    st.plotly_chart(fig, use_container_width=True)
 
 
 def comparechart(company_name, comp_name, df, period): 
