@@ -5,8 +5,9 @@ from datetime import date
 import json
 from YTD import predDuration
 
-sys.path.append("Streamlit/")
-from Monte_Carlo import *
+sys.path[0] += '\\..'
+
+from Streamlit.Monte_Carlo import *
 
 st.set_page_config(
     page_title="Monte Carlo Simulation",
