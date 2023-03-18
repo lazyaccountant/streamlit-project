@@ -1,9 +1,12 @@
 import streamlit as st
-from Streamlit/Monte_Carlo import *
+import sys
 from AFX_API import get_data
 from datetime import date
 import json
 from YTD import predDuration
+
+sys.path.append("./")
+from Monte_Carlo import *
 
 st.set_page_config(
     page_title="Monte Carlo Simulation",
