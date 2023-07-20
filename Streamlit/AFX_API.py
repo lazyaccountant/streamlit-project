@@ -11,22 +11,20 @@ def get_data(ticker, start, stop):
     url = "https://afx.kwayisi.org/chart/ngx/" + ticker
     r = requests.get(url)
     js = r.text
-    
+
     bb = re.split("data:", js)[1]
     bb = bb[1:-9]
     bb = bb.split("],")
-    
-    for i in range(len(bb)):
-        bb[i] = bb[i].replace(r"[", "")
-        bb[i] = bb[i].replace(r"]", "")
-        bb[i] = bb[i].replace("d", "")
-        bb[i] = bb[i].replace(r"(", "")
-        bb[i] = bb[i].replace(r")", "")
-        bb[i] = bb[i].replace(r'"', '')
-    
-    data = {"Date": [],
-            "Price": []}
-    
+
+    pattern = r"[^0-9-,.]"
+
+    bb = [re.sub(pattern, "", b) for b in bb]
+
+    data = {
+        "Date": [],
+        "Price": []
+    }
+
     for b in bb:
         data["Date"].append(b.split(",")[0])
         data["Price"].append(b.split(",")[1])
@@ -34,10 +32,9 @@ def get_data(ticker, start, stop):
     df = pd.DataFrame(data)
     df["Date"] = pd.to_datetime(df["Date"])
     df.set_index("Date", inplace=True)
-    df["Price"] = df["Price"].str.replace(",", "")
     df["Price"] = df["Price"].astype(float)
-    
-    
+        
+        
     df = df.loc[start:stop]
     
     return df
