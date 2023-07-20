@@ -1,10 +1,6 @@
 import requests
 import pandas as pd
 import re
-import numpy as np
-from datetime import datetime
-import time
-import json
 
 # retrieve stock data, date format: yyyy-mm-dd
 def get_data(ticker, start, stop):
