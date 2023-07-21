@@ -11,7 +11,7 @@ st.set_page_config(
     page_icon="📈",
 )
 
-with open("company_data.json") as json_file:
+with open("Streamlit/company_data.json") as json_file:
     data = json.load(json_file)
 
 daysCount = daysCount()
