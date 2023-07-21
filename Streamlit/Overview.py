@@ -11,15 +11,13 @@ st.set_page_config(
     page_icon="📈",
 )
 
-with open("company_data.json") as json_file:
+with open("company_data.json", "r") as json_file:
     data = json.load(json_file)
 
 daysCount = daysCount()
 
 
 period_dict = {"1M": 21, "3M": 63, "6M": 126, "1Y": 252, "YTD": daysCount, "MAX": 0}
-
-no_of_comp = 0
 
 option = st.selectbox("Enter Company Name", list(data.keys()))
 period = st.sidebar.selectbox("Period", list(period_dict.keys()))
