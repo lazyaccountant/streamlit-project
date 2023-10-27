@@ -2,7 +2,7 @@
 
 ## Overview
 
-RandomWalk is a comprehensive financial web application tailored for investors and traders looking to gain valuable insights into the Nigerian Stock Exchange. It offers a wide range of powerful features for analyzing historical stock data, optimizing portfolios, predicting stock prices, and comparing company performance. Built using Python and Streamlit, StockVista provides an intuitive and user-friendly interface for all your financial analysis needs.
+RandomWalk is a comprehensive financial web application tailored for investors and traders looking to gain valuable insights into the Nigerian Stock Exchange. It offers a wide range of powerful features for analyzing historical stock data, optimizing portfolios, predicting stock prices, and comparing company performance. Built using Python and Streamlit, RandomWalk provides an intuitive and user-friendly interface for all your financial analysis needs.
 
 ## Features
 
